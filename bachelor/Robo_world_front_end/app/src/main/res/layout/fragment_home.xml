@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:fitsSystemWindows="true">
+
+    <ImageButton
+        android:id="@+id/soundButton"
+        android:layout_width="80dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/selected_robot_state_background"
+        android:elevation="20dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_claxon_48"
+        app:layout_constraintBottom_toTopOf="@+id/moveUpButton"
+        app:layout_constraintStart_toEndOf="@+id/lightButton" />
+
+    <ImageButton
+        android:id="@+id/lightButton"
+        android:layout_width="80dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/selected_robot_state_background"
+        android:elevation="20dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_light_48"
+        app:layout_constraintBottom_toTopOf="@+id/moveUpButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/parkButton"
+        android:layout_width="80dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/selected_robot_state_background"
+        android:elevation="20dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_parking_48"
+        app:layout_constraintBottom_toTopOf="@+id/moveUpButton"
+        app:layout_constraintStart_toEndOf="@+id/soundButton" />
+
+    <ImageButton
+        android:id="@+id/moveRightButton"
+        android:layout_width="80dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/selected_robot_state_background"
+        android:elevation="20dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_arrow_move_right"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintStart_toEndOf="@+id/moveDownButton" />
+
+    <ImageButton
+        android:id="@+id/moveLeftButton"
+        android:layout_width="80dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/selected_robot_state_background"
+        android:elevation="20dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_arrow_move_left_48"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/moveUpButton"
+        android:layout_width="80dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/selected_robot_state_background"
+        android:elevation="20dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_move_up_48"
+        app:layout_constraintBottom_toTopOf="@+id/moveDownButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/moveDownButton"
+        android:layout_width="80dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/selected_robot_state_background"
+        android:elevation="20dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_arrow_down_48"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintStart_toEndOf="@+id/moveLeftButton" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:theme="@style/Theme.Navbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_bar" />
+
+    <LinearLayout
+        android:id="@+id/bot_status_layout"
+        android:layout_width="300dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selected_robot_state_background"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/botConnectionStatusImage"
+            android:layout_width="10dp"
+            android:layout_height="67dp"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/selectedBotName"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/connectButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/button_gradient_background"
+        android:elevation="20dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:padding="10dp"
+        android:text="CONNECT"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bot_status_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

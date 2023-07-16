@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Robo World</string>
+    <!-- login strings -->
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_login">Login</string>
+    <string name="email_hint"><font size="16">Your email</font></string>
+    <string name="password_hint"><font size="16">Your password</font></string>
+    <string name="welcome_back_text">Welcome back!</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up_hook"><a href="">Don\'t have an account? Sign up</a></string>
+    <!-- register strings -->
+    <string name="get_started_free">Get started free!</string>
+    <string name="first_name_hint"><font size="16">Your first name</font></string>
+    <string name="last_name_hint"><font size="16">Your last name</font></string>
+    <string name="login_hook"><a href="">Already have an account? Sign in</a></string>
+    <string name="sign_up">Sign Up</string>
+    <!--  navbar strings  -->
+    <string name="profile">Profile</string>
+    <string name="friends">Friends</string>
+    <string name="chat">Chat</string>
+    <string name="home">Play</string>
+    <string name="bots">Bots</string>
+    <string name="shared_preferences_key">shared-preferences-key</string>
+</resources>
